@@ -1,0 +1,54 @@
+title: KH1R DLL Client
+originalAuthor: Gicu
+description: In-game Archipelago client.  Press F4 to toggle connection window.
+dependencies:
+- name: gaithern/kh1-lua-library
+assets:
+- name: al01.ard
+  method: copy
+  source:
+  - name: al01.ard
+- name: scripts/1fmRandoClient.lua
+  method: copy
+  source:
+  - name: scripts/1fmRandoClient.lua
+- name: scripts/io_packages/ArchipelagoGUI.dll
+  method: copy
+  source:
+  - name: scripts/io_packages/ArchipelagoGUI.dll
+- name: scripts/io_packages/lua-apclientpp.dll
+  method: copy
+  source:
+  - name: scripts/io_packages/lua-apclientpp.dll
+- name: scripts/io_packages/client/death_link.lua
+  method: copy
+  source:
+  - name: scripts/io_packages/client/death_link.lua
+- name: scripts/io_packages/client/receive_items.lua
+  method: copy
+  source:
+  - name: scripts/io_packages/client/receive_items.lua
+- name: scripts/io_packages/client/send_locations.lua
+  method: copy
+  source:
+  - name: scripts/io_packages/client/send_locations.lua
+- name: scripts/io_packages/client/synth_hints.lua
+  method: copy
+  source:
+  - name: scripts/io_packages/client/synth_hints.lua
+- name: to_copy/libgcc_s_seh-1.dll
+  method: copy
+  source:
+  - name: to_copy/libgcc_s_seh-1.dll
+- name: to_copy/libstdc++-6.dll
+  method: copy
+  source:
+  - name: to_copy/libstdc++-6.dll
+- name: to_copy/libwinpthread-1
+  method: copy
+  source:
+  - name: to_copy/libwinpthread-1
+- name: to_copy/zlib1.dll
+  method: copy
+  source:
+  - name: to_copy/zlib1.dll
