@@ -48,10 +48,10 @@ assets:
   method: copy
   source:
   - name: to_copy/libstdc++-6.dll
-- name: to_copy/libwinpthread-1
+- name: to_copy/libwinpthread-1.dll
   method: copy
   source:
-  - name: to_copy/libwinpthread-1
+  - name: to_copy/libwinpthread-1.dll
 - name: to_copy/zlib1.dll
   method: copy
   source:
