@@ -12,6 +12,10 @@ assets:
   method: copy
   source:
   - name: scripts/1fmRandoClient.lua
+- name: scripts/io_packages/json.lua
+  method: copy
+  source:
+  - name: scripts/io_packages/json.lua
 - name: scripts/io_packages/ArchipelagoGUI.dll
   method: copy
   source:
