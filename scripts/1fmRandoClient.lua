@@ -220,7 +220,7 @@ function _OnInit()
     if GAME_ID == 0xAF71841E and ENGINE_TYPE == "BACKEND" then
         require("VersionCheck")
         copy_dll_files()
-        AP = require("lua-apclientpp")
+        --AP = require("lua-apclientpp")
         location_map = fill_location_map()
     else
         ConsolePrint("KH1 not detected, not running script")

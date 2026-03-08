@@ -16,14 +16,14 @@ assets:
   method: copy
   source:
   - name: scripts/io_packages/json.lua
-- name: scripts/io_packages/ArchipelagoGUI.dll
-  method: copy
-  source:
-  - name: scripts/io_packages/ArchipelagoGUI.dll
-- name: scripts/io_packages/lua-apclientpp.dll
-  method: copy
-  source:
-  - name: scripts/io_packages/lua-apclientpp.dll
+#- name: scripts/io_packages/ArchipelagoGUI.dll
+#  method: copy
+#  source:
+#  - name: scripts/io_packages/ArchipelagoGUI.dll
+#- name: scripts/io_packages/lua-apclientpp.dll
+#  method: copy
+#  source:
+#  - name: scripts/io_packages/lua-apclientpp.dll
 - name: scripts/io_packages/client/death_link.lua
   method: copy
   source:
