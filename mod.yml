@@ -4,10 +4,6 @@ description: In-game Archipelago client.  Press F4 to toggle connection window.
 dependencies:
 - name: gaithern/kh1-lua-library
 assets:
-- name: al01.ard
-  method: copy
-  source:
-  - name: al01.ard
 - name: scripts/1fmRandoClient.lua
   method: copy
   source:
