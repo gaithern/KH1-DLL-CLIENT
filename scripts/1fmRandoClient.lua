@@ -16,7 +16,7 @@ local ArchGUI         = require("ArchipelagoGUI")
 local game_name = "Kingdom Hearts"
 local items_handling = 3 -- Full remote except starting inventory
 local client_version = {1, 1, 0}
-local message_format = AP.RenderFormat.TEXT
+local message_format = nil
 local ap = nil
 
 -- Game state data
@@ -63,7 +63,7 @@ function copy_file(source_path, dest_path)
 end
 
 function copy_dll_files()
-    local OTHER_PATH = SCRIPTS_PATH:match("(.*)/") .. "/to_copy"
+    local OTHER_PATH = SCRIPT_PATH:match("(.*)/") .. "/to_copy"
     copy_file(OTHER_PATH .. "/libgcc_s_seh-1.dll",  "libgcc_s_seh-1.dll")
     copy_file(OTHER_PATH .. "/libstdc++-6.dll",     "libstdc++-6.dll")
     copy_file(OTHER_PATH .. "/libwinpthread-1.dll", "libwinpthread-1.dll")
@@ -220,7 +220,8 @@ function _OnInit()
     if GAME_ID == 0xAF71841E and ENGINE_TYPE == "BACKEND" then
         require("VersionCheck")
         copy_dll_files()
-        --AP = require("lua-apclientpp")
+        AP = require("lua-apclientpp")
+        message_format = AP.RenderFormat.TEXT
         location_map = fill_location_map()
     else
         ConsolePrint("KH1 not detected, not running script")

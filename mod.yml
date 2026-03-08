@@ -16,14 +16,14 @@ assets:
   method: copy
   source:
   - name: scripts/io_packages/json.lua
-#- name: scripts/io_packages/ArchipelagoGUI.dll
-#  method: copy
-#  source:
-#  - name: scripts/io_packages/ArchipelagoGUI.dll
-#- name: scripts/io_packages/lua-apclientpp.dll
-#  method: copy
-#  source:
-#  - name: scripts/io_packages/lua-apclientpp.dll
+- name: scripts/io_packages/ArchipelagoGUI.dll
+  method: copy
+  source:
+  - name: scripts/io_packages/ArchipelagoGUI.dll
+- name: scripts/io_packages/lua-apclientpp.dll
+  method: copy
+  source:
+  - name: scripts/io_packages/lua-apclientpp.dll
 - name: scripts/io_packages/client/death_link.lua
   method: copy
   source:
@@ -40,19 +40,19 @@ assets:
   method: copy
   source:
   - name: scripts/io_packages/client/synth_hints.lua
-#- name: to_copy/libgcc_s_seh-1.dll
-#  method: copy
-#  source:
-#  - name: to_copy/libgcc_s_seh-1.dll
-#- name: to_copy/libstdc++-6.dll
-#  method: copy
-#  source:
-#  - name: to_copy/libstdc++-6.dll
-#- name: to_copy/libwinpthread-1.dll
-#  method: copy
-#  source:
-#  - name: to_copy/libwinpthread-1.dll
-#- name: to_copy/zlib1.dll
-#  method: copy
-#  source:
-#  - name: to_copy/zlib1.dll
+- name: to_copy/libgcc_s_seh-1.dll
+  method: copy
+  source:
+  - name: to_copy/libgcc_s_seh-1.dll
+- name: to_copy/libstdc++-6.dll
+  method: copy
+  source:
+  - name: to_copy/libstdc++-6.dll
+- name: to_copy/libwinpthread-1.dll
+  method: copy
+  source:
+  - name: to_copy/libwinpthread-1.dll
+- name: to_copy/zlib1.dll
+  method: copy
+  source:
+  - name: to_copy/zlib1.dll
