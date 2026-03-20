@@ -213,6 +213,7 @@ end
 
 function _OnInit()
     local initialData = ArchGUI.peek_data()
+    AP = require("lua-apclientpp")
     if initialData and initialData.slot ~= "" then
         ConsolePrint("Auto-connecting to: " .. initialData.slot)
         connect(initialData.host, initialData.slot, initialData.password)
@@ -220,7 +221,6 @@ function _OnInit()
     if GAME_ID == 0xAF71841E and ENGINE_TYPE == "BACKEND" then
         require("VersionCheck")
         copy_dll_files()
-        AP = require("lua-apclientpp")
         message_format = AP.RenderFormat.TEXT
         location_map = fill_location_map()
     else
