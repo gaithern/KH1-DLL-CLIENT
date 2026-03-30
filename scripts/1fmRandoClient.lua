@@ -29,6 +29,7 @@ game_state.hinted_locations = {}
 game_state.items_received = {}
 game_state.remote_location_ids = {}
 game_state.slot_data = {}
+game_state.goal_sent = false
 
 frame_count = 0
 location_map = {}
@@ -73,6 +74,8 @@ end
 function reset_game_state()
     game_state.items_received = {}
     game_state.slot_data = {}
+    game_state.victory = false
+    game_state.goal_sent = false
 end
 
 function CheckForGUIData()
@@ -125,6 +128,7 @@ function connect(server, slot, password)
         else
             ap:ConnectUpdate(nil, {"Lua-APClientPP"})
         end
+        ap:StatusUpdate(AP.ClientStatus.PLAYING)
     end
 
     function on_slot_refused(reasons)
@@ -246,6 +250,10 @@ function _OnFrame()
                             time=os.time(),
                             source=ap:get_player_alias(ap:get_player_number())
                         }, {game_name}, {ap:get_player_number()}, {"DeathLink"})
+                end
+                if ap and game_state.victory and not game_state.goal_sent then
+                    ap:StatusUpdate(AP.ClientStatus.GOAL)
+                    game_state.goal_sent = true
                 end
                 game_state.sora_koed = sora_koed()
                 death_link_frame()
